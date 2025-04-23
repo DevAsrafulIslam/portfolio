@@ -10,14 +10,20 @@ const Education = () => {
       icon: <FaGraduationCap className="text-4xl" />,
       items: [
         {
-          title: "Bachelor of Science in Computer Science",
-          institution: "Your University Name",
-          year: "2019 - 2023",
+          title: "Bachelor of Science in Computer Science and Engineering",
+          institution: "Uttara University",
+          year: "2024 - On Going",
           description: "Specialized in Software Engineering with focus on web technologies and modern development practices."
         },
         {
+          title: "Diploma in Computer Science Engineering",
+          institution: "Model Institute of Science and Technology (MIST)",
+          year: "2017 - 2021",
+          description: "Comprehensive study in computer engineering fundamentals, programming, and system design."
+        },
+        {
           title: "Higher Secondary Certificate",
-          institution: "Your College Name",
+          institution: "Sonavori High School",
           year: "2017 - 2019",
           description: "Completed HSC with major in Science, achieving excellent academic results."
         }
