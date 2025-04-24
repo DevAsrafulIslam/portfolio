@@ -74,7 +74,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="min-h-screen py-20 px-4 bg-[#011627] relative overflow-hidden">
+    <div className="min-h-screen py-24 px-4 bg-[#011627] relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,180,216,0.1),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:32px_32px] opacity-20"></div>
@@ -166,7 +166,8 @@ const Projects = () => {
                 </div>
 
                 {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#011627]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div className="absolute inset-0 bg-gradient-to-t from-[#011627]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+
               </motion.div>
             ))}
           </motion.div>

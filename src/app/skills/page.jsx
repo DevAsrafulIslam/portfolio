@@ -10,8 +10,8 @@ const Skills = () => {
       icon: <FaCode className="text-4xl" />,
       skills: [
         { name: "React.js", level: 90 },
-        { name: "Next.js", level: 85 },
-        { name: "JavaScript", level: 90 },
+        { name: "Next.js", level: 75 },
+        { name: "JavaScript", level: 60 },
         { name: "HTML/CSS", level: 95 },
         { name: "Tailwind CSS", level: 90 }
       ]
@@ -20,10 +20,10 @@ const Skills = () => {
       title: "Backend Development",
       icon: <FaServer className="text-4xl" />,
       skills: [
-        { name: "Node.js", level: 85 },
-        { name: "Express.js", level: 80 },
-        { name: "MongoDB", level: 85 },
-        { name: "RESTful APIs", level: 90 },
+        { name: "Node.js", level: 45 },
+        { name: "Express.js", level: 50 },
+        { name: "MongoDB", level: 55 },
+        { name: "RESTful APIs", level: 40 },
         { name: "Firebase", level: 85 }
       ]
     },
@@ -33,18 +33,18 @@ const Skills = () => {
       skills: [
         { name: "Git", level: 90 },
         { name: "VS Code", level: 95 },
-        { name: "Webpack", level: 80 },
+        // { name: "Webpack", level: 80 },
         { name: "npm/yarn", level: 90 },
-        { name: "Agile/Scrum", level: 85 }
+        // { name: "Agile/Scrum", level: 85 }
       ]
     },
     {
       title: "Design",
       icon: <FaPalette className="text-4xl" />,
       skills: [
-        { name: "Figma", level: 85 },
-        { name: "Adobe XD", level: 80 },
-        { name: "UI/UX", level: 85 },
+        // { name: "Figma", level: 85 },
+        { name: "Adobe XD", level: 70 },
+        // { name: "UI/UX", level: 85 },
         { name: "Responsive Design", level: 90 },
         { name: "Web Design", level: 85 }
       ]
@@ -52,7 +52,7 @@ const Skills = () => {
   ];
 
   return (
-    <div className="min-h-screen py-20 px-4 bg-[#011627] relative overflow-hidden">
+    <div className="min-h-screen py-24 px-4 bg-[#011627] relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,180,216,0.1),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:32px_32px] opacity-20"></div>
@@ -64,7 +64,7 @@ const Skills = () => {
           transition={{ duration: 0.8 }}
           className="space-y-12"
         >
-          <motion.h2 
+          <motion.h2
             initial={{ y: -50 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.6 }}

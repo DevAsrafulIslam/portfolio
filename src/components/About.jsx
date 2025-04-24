@@ -11,7 +11,7 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen flex items-center py-20 px-4 bg-[#011627] relative overflow-hidden">
+    <div className="min-h-screen flex items-center py-24 px-4 bg-[#011627] relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,180,216,0.1),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:32px_32px] opacity-20"></div>
@@ -23,7 +23,7 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="space-y-12"
         >
-          <motion.h2 
+          <motion.h2
             initial={{ y: -50 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.6 }}
@@ -31,7 +31,7 @@ const About = () => {
           >
             About <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00B4D8] via-[#48cae4] to-[#90e0ef]">Me</span>
           </motion.h2>
-          
+
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div
               initial={{ x: -100, opacity: 0 }}
@@ -39,7 +39,7 @@ const About = () => {
               transition={{ delay: 0.2 }}
               className="space-y-8"
             >
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
@@ -50,7 +50,7 @@ const About = () => {
                 I bring ideas to life through clean, efficient code.
               </motion.p>
 
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
@@ -69,18 +69,29 @@ const About = () => {
                   <span className="text-gray-300">Gazipur Sadar, Dhaka</span>
                 </div>
               </motion.div>
+              <motion.div className='flex justify-between gap-4'>
+                <motion.a
+                  href="/contact"
+                  whileHover={{ scale: 1.05, backgroundColor: '#48cae4' }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-1/2 px-8 py-3 bg-gradient-to-r from-[#00B4D8] to-[#48cae4] text-white font-semibold rounded-lg shadow-lg shadow-[#00B4D8]/20 transition-all duration-300 flex items-center space-x-2" >
 
-              <motion.button
-                whileHover={{ scale: 1.05, backgroundColor: '#48cae4' }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 bg-gradient-to-r from-[#00B4D8] to-[#48cae4] text-white font-semibold rounded-lg 
-                         shadow-lg shadow-[#00B4D8]/20 transition-all duration-300 flex items-center space-x-2"
-              >
-                <FaDownload />
-                <span>Download CV</span>
-              </motion.button>
+                  <span>Hire Me</span>
+                </motion.a>
+                <motion.a
+                  href="/CV/CV Asraful Islam.pdf"
+                  download
+                  target="_blank"
+                  whileHover={{ scale: 1.05, backgroundColor: '#48cae4' }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-1/2 px-8 py-3 bg-gradient-to-r from-[#00B4D8] to-[#48cae4] text-white font-semibold rounded-lg shadow-lg shadow-[#00B4D8]/20 transition-all duration-300 flex items-center space-x-2" >
+                  <FaDownload />
+                  <span>Download CV</span>
+                </motion.a>
+
+              </motion.div>
             </motion.div>
-            
+
             <motion.div
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
@@ -89,9 +100,9 @@ const About = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-[#00B4D8] to-[#48cae4] rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300 opacity-20"></div>
               <div className="relative aspect-square rounded-2xl overflow-hidden border-2 border-[#00B4D8]/20">
-                <img 
-                  src="/images/profile.png" 
-                  alt="About Me" 
+                <img
+                  src="/images/profile.png"
+                  alt="About Me"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
@@ -99,7 +110,7 @@ const About = () => {
           </div>
 
           {/* Stats Section */}
-          <motion.div 
+          <motion.div
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.8 }}

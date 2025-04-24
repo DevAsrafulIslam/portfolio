@@ -13,7 +13,7 @@ const Education = () => {
           title: "Bachelor of Science in Computer Science and Engineering",
           institution: "Uttara University",
           year: "2024 - On Going",
-          description: "Specialized in Software Engineering with focus on web technologies and modern development practices."
+          description: "Building web applications with a strong foundation in Software Engineering and modern dev practices."
         },
         {
           title: "Diploma in Computer Science Engineering",
@@ -34,14 +34,14 @@ const Education = () => {
       icon: <FaCertificate className="text-4xl" />,
       items: [
         {
-          title: "Full Stack Web Development",
+          title: "Web Development",
           institution: "Programming Hero",
           year: "2023",
           description: "Comprehensive training in modern web development technologies and best practices."
         },
         {
-          title: "Advanced React and Next.js",
-          institution: "Udemy",
+          title: "React and Next.js",
+          institution: "rogramming Hero",
           year: "2023",
           description: "Deep dive into advanced React patterns, Next.js, and modern frontend development."
         }
@@ -57,18 +57,18 @@ const Education = () => {
           year: "2023",
           description: "Recognized for outstanding performance and innovative project development."
         },
-        {
-          title: "Hackathon Winner",
-          institution: "Tech Fest 2023",
-          year: "2023",
-          description: "First place in national-level web development competition."
-        }
+        // {
+        //   title: "Hackathon Winner",
+        //   institution: "Tech Fest 2023",
+        //   year: "2023",
+        //   description: "First place in national-level web development competition."
+        // }
       ]
     }
   ];
 
   return (
-    <div className="min-h-screen py-20 px-4 bg-[#011627] relative overflow-hidden">
+    <div className="min-h-screen py-24 px-4 bg-[#011627] relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,180,216,0.1),transparent_50%)]"></div>
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:32px_32px] opacity-20"></div>
@@ -80,7 +80,7 @@ const Education = () => {
           transition={{ duration: 0.8 }}
           className="space-y-12"
         >
-          <motion.h2 
+          <motion.h2
             initial={{ y: -50 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.6 }}
