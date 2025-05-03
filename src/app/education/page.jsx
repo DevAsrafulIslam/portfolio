@@ -16,7 +16,7 @@ const Education = () => {
           description: "Building web applications with a strong foundation in Software Engineering and modern dev practices."
         },
         {
-          title: "Diploma in Computer Science Engineering",
+          title: "Diploma in Computer Science  Engineering",
           institution: "Model Institute of Science and Technology (MIST)",
           year: "2017 - 2021",
           description: "Comprehensive study in computer engineering fundamentals, programming, and system design."
@@ -24,7 +24,7 @@ const Education = () => {
         {
           title: "Higher Secondary Certificate",
           institution: "Sonavori High School",
-          year: "2017 - 2019",
+          year: "2017",
           description: "Completed HSC with major in Science, achieving excellent academic results."
         }
       ]
@@ -41,7 +41,7 @@ const Education = () => {
         },
         {
           title: "React and Next.js",
-          institution: "rogramming Hero",
+          institution: "Programming Hero",
           year: "2023",
           description: "Deep dive into advanced React patterns, Next.js, and modern frontend development."
         }

@@ -7,7 +7,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Muslim's Corner",
-      description: "A full-stack e-commerce solution with real-time inventory management and secure payment integration.",
+      description: "Muslims Corner 25% off handcrafted watches, accessories, and new items like mugs and clothing, $12.99-$150, easy to buy.",
       image: "/projects/mulsims.png",
       tags: ["React", "Node.js", "MongoDB", "Stripe"],
       github: "https://github.com/DevAsrafulIslam/Muslims-Corner",
@@ -15,7 +15,7 @@ const Projects = () => {
     },
     {
       title: "FoodCart",
-      description: "A collaborative task management platform with real-time updates and team collaboration features.",
+      description: "Premium halal e-commerce site, open 11:00 AM-10:00 PM, offering dishes like tuna, chicken salad, and fish, with easy online ordering.",
       image: "/projects/foodcart.png",
       tags: ["Next.js", "Firebase", "Tailwind CSS"],
       github: "https://github.com/DevAsrafulIslam/foodcart-client",
@@ -23,7 +23,7 @@ const Projects = () => {
     },
     {
       title: "MediCare",
-      description: "An analytics dashboard for social media metrics with interactive charts and data visualization.",
+      description: "Healthcare platform for booking appointments with expert doctors, offering quick scheduling, advanced technology, and cardiac care services for a healthy family.",
       image: "/projects/medicare.png",
       tags: ["React", "D3.js", "Material-UI"],
       github: "https://github.com/DevAsrafulIslam/medicare",
@@ -31,7 +31,7 @@ const Projects = () => {
     },
     {
       title: "Car Doctor",
-      description: "A creative platform leveraging AI to generate unique artwork and illustrations based on text descriptions.",
+      description: "Auto service platform with qualified experts, offering affordable car servicing like oil changes, battery charges, and full repairs, with easy booking.",
       image: "/projects/cardoctor.png",
       tags: ["Next.js", "OpenAI API", "TailwindCSS", "TypeScript"],
       github: "https://github.com/DevAsrafulIslam/car-doctor-client-with-jwt",
@@ -39,7 +39,7 @@ const Projects = () => {
     },
     {
       title: "Bootcamp",
-      description: "A modern chat platform with real-time messaging, file sharing, and video calls using WebRTC.",
+      description: "Online learning platform teaching web development fundamentals (HTML, CSS, JS) through virtual, hybrid, and in-person courses, with enrollment and newsletter sign-up options.",
       image: "/projects/bootcamp.png",
       tags: ["React", "Socket.io", "WebRTC", "Express"],
       github: "https://github.com/DevAsrafulIslam/bootcamp",
@@ -47,7 +47,7 @@ const Projects = () => {
     },
     {
       title: "Task Management App",
-      description: "A comprehensive fitness tracking solution with workout plans, progress monitoring, and social features.",
+      description: "Simple web tool for adding, checking, and deleting tasks with an intuitive interface.",
       image: "/projects/task.png",
       tags: ["React Native", "Redux", "Node.js", "MongoDB"],
       github: "https://github.com/DevAsrafulIslam/todo",
@@ -86,7 +86,7 @@ const Projects = () => {
           transition={{ duration: 0.8 }}
           className="space-y-12"
         >
-          <motion.h2 
+          <motion.h2
             initial={{ y: -50 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.6 }}
@@ -166,7 +166,7 @@ const Projects = () => {
                 </div>
 
                 {/* Hover Overlay */}
-<div className="absolute inset-0 bg-gradient-to-t from-[#011627]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#011627]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
 
               </motion.div>
             ))}

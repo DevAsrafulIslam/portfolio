@@ -7,7 +7,8 @@ const About = () => {
   const stats = [
     { icon: <FaCode />, label: 'Projects Completed', value: '50+' },
     { icon: <FaCoffee />, label: 'Cups of Coffee', value: '1000+' },
-    { icon: <FaLaptopCode />, label: 'Years Experience', value: '3+' },
+    { icon: <FaLaptopCode />, value: 'Junior Developer (since 2025)' }
+
   ];
 
   return (
@@ -79,7 +80,7 @@ const About = () => {
                   <span>Hire Me</span>
                 </motion.a>
                 <motion.a
-                  href="/CV/CV Asraful Islam.pdf"
+                  href="/CV/CV ASRAFUL_ISLAM.pdf"
                   download
                   target="_blank"
                   whileHover={{ scale: 1.05, backgroundColor: '#48cae4' }}
