@@ -302,7 +302,7 @@ const Home = () => {
                     </span>
                   </span>
                   <span className="block text-3xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-[#00B4D8] via-[#48cae4] to-[#90e0ef]">
-                    Front End Developer
+                    Web Developer
                   </span>
                 </motion.h1>
               </div>
