@@ -313,7 +313,7 @@ const Home = () => {
                 transition={{ delay: 0.5 }}
                 className="text-gray-300/90 text-lg md:text-xl leading-relaxed max-w-2xl backdrop-blur-sm"
               >
-                I am a skilled and passionate Front-End Developer, harnessing the power of code
+                I am a skilled and passionate Web Developer, harnessing the power of code
                 and design to create captivating user experiences. With a keen eye for aesthetics
                 and functionality, I bring websites to life.
               </motion.p>
