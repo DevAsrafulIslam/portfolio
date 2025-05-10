@@ -9,12 +9,12 @@ const Education = () => {
       type: "Academic",
       icon: <FaGraduationCap className="text-4xl" />,
       items: [
-        {
-          title: "Bachelor of Science in Computer Science and Engineering",
-          institution: "Uttara University",
-          year: "2024 - On Going",
-          description: "Building web applications with a strong foundation in Software Engineering and modern dev practices."
-        },
+        // {
+        //   title: "Bachelor of Science in Computer Science and Engineering",
+        //   institution: "Uttara University",
+        //   year: "2024 - On Going",
+        //   description: "Building web applications with a strong foundation in Software Engineering and modern dev practices."
+        // },
         {
           title: "Diploma in Computer Science  Engineering",
           institution: "Model Institute of Science and Technology (MIST)",
