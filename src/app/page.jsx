@@ -19,7 +19,7 @@ const Page = () => {
           className="text-center space-y-8"
         >
           {/* Profile Section */}
-          <motion.div
+          {/* <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5 }}
@@ -30,9 +30,19 @@ const Page = () => {
               alt="Asraful Islam"
               className="w-full h-full rounded-full object-cover"
             />
-          </motion.div>
+          </motion.div> */}
 
           {/* Title Section */}
+          <motion.p
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-[#00B4D8] font-medium tracking-[0.2em] uppercase relative inline-block"
+          >
+            <span className="absolute -inset-1 bg-[#00B4D8]/10 blur"></span>
+            <span className="relative">Welcome to my Portfolio</span>
+            <span className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#00B4D8]/50 to-transparent"></span>
+          </motion.p>
           <motion.h1
             initial={{ y: -50 }}
             animate={{ y: 0 }}
