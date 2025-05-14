@@ -70,37 +70,16 @@ const About = () => {
                   <span className="text-gray-300">Gazipur Sadar, Dhaka</span>
                 </div>
               </motion.div>
-              <motion.div className='flex justify-between gap-4'>
-                <motion.a
-                  href="/contact"
-                  whileHover={{ scale: 1.05, backgroundColor: '#48cae4' }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-1/2 px-8 py-3 bg-gradient-to-r from-[#00B4D8] to-[#48cae4] text-white font-semibold rounded-lg shadow-lg shadow-[#00B4D8]/20 transition-all duration-300 flex items-center space-x-2" >
-
-                  <span>Hire Me</span>
-                </motion.a>
-                <motion.a
-                  href="/CV/CV ASRAFUL_ISLAM.pdf"
-                  download
-                  target="_blank"
-                  whileHover={{ scale: 1.05, backgroundColor: '#48cae4' }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-1/2 px-8 py-3 bg-gradient-to-r from-[#00B4D8] to-[#48cae4] text-white font-semibold rounded-lg shadow-lg shadow-[#00B4D8]/20 transition-all duration-300 flex items-center space-x-2" >
-                  <FaDownload />
-                  <span>Download CV</span>
-                </motion.a>
-
-              </motion.div>
             </motion.div>
 
             <motion.div
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="relative group"
+              className="relative group w-full max-w-md mx-auto"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-[#00B4D8] to-[#48cae4] rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300 opacity-20"></div>
-              <div className="relative aspect-square rounded-2xl overflow-hidden border-2 border-[#00B4D8]/20">
+              <div className="relative aspect-square rounded-2xl overflow-hidden border-2 border-[#00B4D8]/20 w-auto h-auto mx-auto">
                 <img
                   src="/images/profile.png"
                   alt="About Me"
@@ -119,7 +98,7 @@ const About = () => {
           >
             {stats.map((stat, index) => (
               <motion.div
-                key={stat.label}
+                key={`stat-${index}`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 + index * 0.2 }}

@@ -248,6 +248,18 @@ const Home = () => {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time for animations
+    const timer = setTimeout(() => setIsLoading(false), 500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <LoadingSpinner />;
+  }
+
   return (
     <div className="w-full min-h-screen flex flex-col justify-center px-8 lg:px-16 bg-[#011627] relative overflow-hidden">
       {/* Animated Background Gradient */}
@@ -283,14 +295,7 @@ const Home = () => {
               className="flex-1 space-y-8"
             >
               <div className="space-y-4">
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.3 }}
-                  className="text-[#00B4D8] font-medium tracking-wider"
-                >
-                  WELCOME TO MY PORTFOLIO
-                </motion.p>
+
 
                 <motion.h1
                   className="text-4xl md:text-6xl lg:text-6xl font-bold space-y-2"
@@ -318,38 +323,6 @@ const Home = () => {
                 and functionality, I bring websites to life.
               </motion.p>
 
-              {/* CTA Buttons */}
-              {/* <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7 }}
-                className="flex flex-wrap gap-4 pt-6"
-              >
-                <motion.a
-                  href="mailto:asrafulislam.dev@gmail.com"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="group px-8 py-3 bg-gradient-to-r from-[#00B4D8] to-[#48cae4] rounded-lg relative overflow-hidden"
-                >
-                  <span className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
-                  <span className="relative text-white font-semibold">Hire me</span>
-                </motion.a>
-
-                <motion.a
-                  href="#"
-                  download="#"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="group px-8 py-3 border-2 border-[#00B4D8] rounded-lg relative overflow-hidden"
-                >
-                  <span className="absolute inset-0 bg-[#00B4D8] translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
-                  <span className="relative text-[#00B4D8] group-hover:text-white font-semibold transition-colors duration-300">
-                    Download CV
-                  </span>
-                  <FaDownload className="inline-block ml-2 relative" />
-                </motion.a>
-              </motion.div> */}
-
               {/* Social Links */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -361,6 +334,7 @@ const Home = () => {
                   { Icon: FaGithub, href: "https://github.com/DevAsrafulIslam" },
                   { Icon: FaLinkedin, href: "https://www.linkedin.com/in/md-asrafulislam/" },
                   { Icon: FaFacebook, href: "https://www.facebook.com/dev.asrafulislam" }
+
                 ].map(({ Icon, href }, index) => (
                   <motion.a
                     key={index}

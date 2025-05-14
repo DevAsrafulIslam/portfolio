@@ -18,30 +18,42 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+  
+    // Form validation
+    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+      toast.error('Please fill in all fields');
+      setIsSubmitting(false);
+      return;
+    }
+  
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast.error('Please enter a valid email address');
+      setIsSubmitting(false);
+      return;
+    }
+  
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          to: 'asrafulislam.dev@gmail.com'
-        }),
+        body: JSON.stringify(formData),
       });
-    
+  
+      const data = await response.json();
+  
       if (response.ok) {
         toast.success('Message sent successfully!');
         setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
-        toast.error('Failed to send message. Please try again.');
+        throw new Error(data.message || 'Failed to send message');
       }
     } catch (error) {
-      toast.error('An error occurred. Please try again later.');
+      console.error('Contact form error:', error);
+      toast.error(error.message || 'An error occurred. Please try again later.');
     } finally {
       setIsSubmitting(false);
     }
@@ -87,7 +99,7 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           className="space-y-12"
         >
-          <motion.h2 
+          <motion.h2
             initial={{ y: -50 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.6 }}
