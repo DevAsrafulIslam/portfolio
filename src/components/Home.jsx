@@ -298,7 +298,7 @@ const Home = () => {
 
 
                 <motion.h1
-                  className="text-4xl md:text-6xl lg:text-6xl font-bold space-y-2"
+                  className="text-xl md:text-3xl lg:text-6xl font-bold space-y-2"
                 >
                   <span className="block bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-gray-300">
                     Hi I'm{' '}

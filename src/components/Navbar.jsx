@@ -44,20 +44,20 @@ const Navbar = () => {
               whileHover={{ scale: 1.05 }}
               className="flex items-center space-x-1 group relative py-1.5"
             >
-              <div className="relative w-8 h-8 flex items-center justify-center">
+              <div className="relative w-12 h-12 flex items-center justify-center">
+                {/* Multiple rotating rings */}
+                <span className="absolute inset-0 rounded-full bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] opacity-70 group-hover:opacity-100 animate-[spin_3s_linear_infinite] transition-opacity duration-300"></span>
+                <span className="absolute inset-[1px] rounded-full bg-gradient-to-r from-[#8b5cf6] to-[#ec4899] opacity-60 group-hover:opacity-90 animate-[spin_4s_linear_infinite_reverse] transition-opacity duration-300"></span>
+                <span className="absolute inset-[2px] rounded-full bg-gradient-to-r from-[#ec4899] to-[#6366f1] opacity-50 group-hover:opacity-80 animate-[spin_5s_linear_infinite] transition-opacity duration-300"></span>
 
+                {/* Inner circle with letter */}
+                <span className="absolute inset-[3px] rounded-full bg-[#011627] flex items-center justify-center transform group-hover:scale-95 transition-transform duration-300">
+                  <span className="text-xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#ec4899] animate-pulse">A</span>
+                </span>
+
+                {/* Hover effect overlay */}
+                <span className="absolute inset-0 rounded-full bg-gradient-to-r from-[#6366f1]/0 to-[#ec4899]/0 group-hover:from-[#6366f1]/10 group-hover:to-[#ec4899]/10 transition-all duration-300"></span>
               </div>
-              <span className="text-lg font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#00B4D8] to-[#48cae4] relative group">
-                Asraful Islam
-
-                {/* Default thin underline */}
-                <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#00B4D8]/50 to-transparent"></span>
-
-                {/* Hover animated thick underline from center */}
-                <span className="absolute -bottom-1 left-1/2 w-0 h-[2px] bg-gradient-to-r from-transparent via-[#00B4D8]/50 to-transparent transition-all duration-300 ease-out group-hover:w-full group-hover:left-0 group-hover:h-[2px] group-hover:translate-x-0 transform -translate-x-1/2"></span>
-              </span>
-
-
             </motion.div>
           </Link>
 

@@ -18,14 +18,14 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-  
+
     // Form validation
     if (!formData.name || !formData.email || !formData.subject || !formData.message) {
       toast.error('Please fill in all fields');
       setIsSubmitting(false);
       return;
     }
-  
+
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
@@ -33,7 +33,7 @@ const Contact = () => {
       setIsSubmitting(false);
       return;
     }
-  
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -42,9 +42,9 @@ const Contact = () => {
         },
         body: JSON.stringify(formData),
       });
-  
+
       const data = await response.json();
-  
+
       if (response.ok) {
         toast.success('Message sent successfully!');
         setFormData({ name: '', email: '', subject: '', message: '' });
@@ -103,9 +103,18 @@ const Contact = () => {
             initial={{ y: -50 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-gray-300"
+            className="text-xl md:text-xl lg:text-4xl font-bold space-y-2 text-center bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-gray-300 relative"
           >
-            Get in <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00B4D8] via-[#48cae4] to-[#90e0ef]">Touch</span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00B4D8] via-[#48cae4] to-[#90e0ef] relative inline-block">
+              Get In Touch
+              {/* Modern animated underline */}
+              <span className="absolute -bottom-2 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#00B4D8] to-transparent"></span>
+              <span className="absolute -bottom-2 left-1/2 w-0 h-[2px] bg-gradient-to-r from-[#00B4D8] via-[#48cae4] to-[#90e0ef] transition-all duration-300 group-hover:w-full group-hover:left-0 transform -translate-x-1/2"></span>
+
+              {/* Decorative dots */}
+              <span className="absolute -bottom-2 left-0 w-1 h-1 rounded-full bg-[#00B4D8] animate-pulse"></span>
+              <span className="absolute -bottom-2 right-0 w-1 h-1 rounded-full bg-[#90e0ef] animate-pulse"></span>
+            </span>
           </motion.h2>
 
           <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -116,7 +125,7 @@ const Contact = () => {
               transition={{ delay: 0.2 }}
               className="space-y-8"
             >
-              <p className="text-gray-300 text-lg">
+              <p className="text-gray-300 text-sm">
                 I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
               </p>
 

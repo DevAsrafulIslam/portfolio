@@ -68,9 +68,18 @@ const Skills = () => {
             initial={{ y: -50 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-gray-300"
+            className="text-xl md:text-xl lg:text-4xl font-bold space-y-2 text-center bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-gray-300 relative"
           >
-            My <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00B4D8] via-[#48cae4] to-[#90e0ef]">Skills</span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00B4D8] via-[#48cae4] to-[#90e0ef] relative inline-block">
+              My Skills
+              {/* Modern animated underline */}
+              <span className="absolute -bottom-2 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#00B4D8] to-transparent"></span>
+              <span className="absolute -bottom-2 left-1/2 w-0 h-[2px] bg-gradient-to-r from-[#00B4D8] via-[#48cae4] to-[#90e0ef] transition-all duration-300 group-hover:w-full group-hover:left-0 transform -translate-x-1/2"></span>
+
+              {/* Decorative dots */}
+              <span className="absolute -bottom-2 left-0 w-1 h-1 rounded-full bg-[#00B4D8] animate-pulse"></span>
+              <span className="absolute -bottom-2 right-0 w-1 h-1 rounded-full bg-[#90e0ef] animate-pulse"></span>
+            </span>
           </motion.h2>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -84,7 +93,7 @@ const Skills = () => {
               >
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="text-[#00B4D8]">{category.icon}</div>
-                  <h3 className="text-2xl font-semibold text-white">{category.title}</h3>
+                  <h3 className="text-sm md:text-lg font-semibold text-white">{category.title}</h3>
                 </div>
 
                 <div className="space-y-4">

@@ -133,7 +133,7 @@ const Page = () => {
               className="inline-flex items-center gap-2 px-6 py-3 bg-[#00B4D8] text-white rounded-lg hover:bg-[#48cae4] transition-all duration-300"
             >
               <FaDownload className="text-lg" />
-              <span>Download Resume</span>
+              <span>Download CV</span>
             </motion.a>
             <motion.a
               href="/projects"

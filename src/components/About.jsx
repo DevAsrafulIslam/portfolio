@@ -7,7 +7,7 @@ const About = () => {
   const stats = [
     { icon: <FaCode />, label: 'Projects Completed', value: '50+' },
     { icon: <FaCoffee />, label: 'Cups of Coffee', value: '1000+' },
-    { icon: <FaLaptopCode />, value: 'Junior Developer (since 2025)' }
+    { icon: <FaLaptopCode />, label: 'Experience', value: 'Junior Developer (since 2025)' }
 
   ];
 
@@ -28,9 +28,18 @@ const About = () => {
             initial={{ y: -50 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-gray-300"
+            className="text-xl md:text-xl lg:text-4xl font-bold space-y-2 text-center bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-gray-300 relative"
           >
-            About <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00B4D8] via-[#48cae4] to-[#90e0ef]">Me</span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00B4D8] via-[#48cae4] to-[#90e0ef] relative inline-block">
+              About Me
+              {/* Modern animated underline */}
+              <span className="absolute -bottom-2 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#00B4D8] to-transparent"></span>
+              <span className="absolute -bottom-2 left-1/2 w-0 h-[2px] bg-gradient-to-r from-[#00B4D8] via-[#48cae4] to-[#90e0ef] transition-all duration-300 group-hover:w-full group-hover:left-0 transform -translate-x-1/2"></span>
+
+              {/* Decorative dots */}
+              <span className="absolute -bottom-2 left-0 w-1 h-1 rounded-full bg-[#00B4D8] animate-pulse"></span>
+              <span className="absolute -bottom-2 right-0 w-1 h-1 rounded-full bg-[#90e0ef] animate-pulse"></span>
+            </span>
           </motion.h2>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -44,7 +53,7 @@ const About = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
-                className="text-gray-300/90 text-lg leading-relaxed"
+                className="text-gray-300/90 text-sm md:text-lg leading-relaxed"
               >
                 I'm a passionate developer with a keen eye for design and a love for creating
                 seamless user experiences. With expertise in both frontend and backend technologies,
@@ -79,11 +88,11 @@ const About = () => {
               className="relative group w-full max-w-md mx-auto"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-[#00B4D8] to-[#48cae4] rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300 opacity-20"></div>
-              <div className="relative aspect-square rounded-2xl overflow-hidden border-2 border-[#00B4D8]/20 w-auto h-auto mx-auto">
+              <div className="relative rounded-2xl overflow-hidden border-2 border-[#00B4D8]/20 w-full h-[500px] mx-auto">
                 <img
                   src="/images/profile.png"
                   alt="About Me"
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-full object-cover object-[center_top] transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
             </motion.div>
@@ -107,7 +116,7 @@ const About = () => {
                 <div className="flex items-center justify-center space-x-4">
                   <span className="text-3xl text-[#00B4D8]">{stat.icon}</span>
                   <div className="text-center">
-                    <h3 className="text-2xl font-bold text-white">{stat.value}</h3>
+                    <h3 className="text-sm md:text-lg font-bold text-white">{stat.value}</h3>
                     <p className="text-gray-400">{stat.label}</p>
                   </div>
                 </div>
