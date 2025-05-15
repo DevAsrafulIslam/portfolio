@@ -46,7 +46,7 @@ const Page = () => {
           <motion.h1
             initial={{ y: -50 }}
             animate={{ y: 0 }}
-            className="text-6xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-gray-300"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-gray-300"
           >
             Hi, I'm <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00B4D8] via-[#48cae4] to-[#90e0ef]">Asraful Islam</span>
           </motion.h1>
@@ -57,10 +57,10 @@ const Page = () => {
             transition={{ delay: 0.2 }}
             className="space-y-4"
           >
-            <p className="text-2xl md:text-3xl text-gray-300 font-semibold">
+            <p className="text-2xl sm:text-3xl md:text-3xl text-gray-300 font-semibold">
               Frontend Developer
             </p>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto">
               Specializing in creating beautiful, responsive web applications with React & Next.js
             </p>
           </motion.div>

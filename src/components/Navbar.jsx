@@ -33,23 +33,31 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#011627]/80 backdrop-blur-md py-4' : 'bg-[#011627] py-6'
+      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#011627]/80 backdrop-blur-md py-2.5' : 'bg-[#011627] py-3.5'
         }`}
     >
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between h-11">
           {/* Logo */}
           <Link href="/">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="flex items-center space-x-1"
+              className="flex items-center space-x-1 group relative py-1.5"
             >
-              <div className="relative w-10 h-10 flex items-center justify-center">
+              <div className="relative w-8 h-8 flex items-center justify-center">
 
               </div>
-              <span className="text-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#00B4D8] to-[#48cae4]">
+              <span className="text-lg font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#00B4D8] to-[#48cae4] relative group">
                 Asraful Islam
+
+                {/* Default thin underline */}
+                <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#00B4D8]/50 to-transparent"></span>
+
+                {/* Hover animated thick underline from center */}
+                <span className="absolute -bottom-1 left-1/2 w-0 h-[2px] bg-gradient-to-r from-transparent via-[#00B4D8]/50 to-transparent transition-all duration-300 ease-out group-hover:w-full group-hover:left-0 group-hover:h-[2px] group-hover:translate-x-0 transform -translate-x-1/2"></span>
               </span>
+
+
             </motion.div>
           </Link>
 
@@ -62,13 +70,22 @@ const Navbar = () => {
                 className="group relative"
               >
                 <span className={`${pathname === link.href
-                  ? 'text-[#00B4D8]'
-                  : 'text-gray-300 hover:text-white'
+                  ? 'bg-clip-text text-transparent bg-gradient-to-r from-[#00B4D8] to-[#48cae4] font-semibold'
+                  : 'text-[#94a3b8] hover:text-[#e2e8f0] font-medium'
                   } transition-colors duration-300`}>
                   {link.label}
                 </span>
-                <span className={`absolute -bottom-1 left-0 h-0.5 bg-[#00B4D8] transition-all duration-300 ${pathname === link.href ? 'w-full' : 'w-0 group-hover:w-full'
-                  }`}></span>
+
+                {/* Only show default underline for active item */}
+                {pathname === link.href && (
+                  <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#00B4D8]/50 to-transparent"></span>
+                )}
+
+                {/* Hover animated underline */}
+                <span className={`absolute -bottom-1 left-1/2 w-0 h-[2px] bg-gradient-to-r from-transparent ${pathname === link.href
+                  ? 'via-[#00B4D8]/50'
+                  : 'via-[#e2e8f0]/50'
+                  } to-transparent transition-all duration-300 ease-out group-hover:w-full group-hover:left-0 group-hover:h-[2px] group-hover:translate-x-0 transform -translate-x-1/2`}></span>
               </Link>
             ))}
           </div>
@@ -110,7 +127,7 @@ const Navbar = () => {
           </div>
         </motion.div>
       </div>
-    </motion.nav>
+    </motion.nav >
   );
 };
 
