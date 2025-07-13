@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Your Portfolio",
+  title: "Asraful Islam | Portfolio",
   description: "Personal portfolio showcasing my work and skills",
 };
 
