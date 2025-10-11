@@ -5,9 +5,9 @@ import { FaDownload, FaCode, FaCoffee, FaLaptopCode } from 'react-icons/fa';
 
 const About = () => {
   const stats = [
-    { icon: <FaCode />, label: 'Projects Completed', value: '50+' },
-    { icon: <FaCoffee />, label: 'Cups of Coffee', value: '1000+' },
-    { icon: <FaLaptopCode />, label: 'Experience', value: 'Junior Developer (since 2025)' }
+    { icon: <FaCode />, label: 'Projects Completed', value: '5+' },
+    { icon: <FaLaptopCode />, label: 'Hands-on Coding Experience', value: '20+' },
+    { icon: <FaCode />, label: 'Experience', value: 'Front-End Developer Since 2025 | Remote' }
 
   ];
 
@@ -103,7 +103,7 @@ const About = () => {
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.8 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12"
+            className="grid grid:around-center grid-cols-1 md:grid-cols-3 gap-6 mt-12"
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -111,7 +111,7 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 + index * 0.2 }}
-                className="backdrop-blur-sm bg-white/5 p-6 rounded-xl border border-[#00B4D8]/20 hover:border-[#00B4D8]/40 transition-all duration-300"
+                className=" backdrop-blur-sm bg-white/5 p-6 rounded-xl border border-[#00B4D8]/20 hover:border-[#00B4D8]/40 transition-all duration-300"
               >
                 <div className="flex items-center justify-center space-x-4">
                   <span className="text-3xl text-[#00B4D8]">{stat.icon}</span>
