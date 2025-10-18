@@ -7,7 +7,7 @@ const About = () => {
   const stats = [
     { icon: <FaCode />, label: 'Projects Completed', value: '5+' },
     { icon: <FaLaptopCode />, label: 'Hands-on Coding Experience', value: '20+' },
-    { icon: <FaCode />, label: 'Experience', value: 'Front-End Developer Since 2025 | Remote' }
+    { icon: <FaCode />, label: 'Experience', value: 'Full Stack Developer Since 2025 | Remote' }
 
   ];
 

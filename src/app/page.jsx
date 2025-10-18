@@ -58,7 +58,7 @@ const Page = () => {
             className="space-y-4"
           >
             <p className="text-2xl sm:text-3xl md:text-3xl text-gray-300 font-semibold">
-              Frontend Developer
+              Full Stack Developer
             </p>
             <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto">
               Specializing in creating beautiful, responsive web applications with React & Next.js
@@ -126,7 +126,7 @@ const Page = () => {
             className="flex justify-center gap-4 flex-wrap"
           >
             <motion.a
-              href="/CV/CV ASRAFUL_ISLAM.pdf"
+              href="/CV/CV_ASRAFUL_ISLAM.pdf"
               download
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

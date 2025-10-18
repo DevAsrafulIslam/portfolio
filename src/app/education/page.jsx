@@ -43,7 +43,7 @@ const Education = () => {
           title: "React and Next.js",
           institution: "Programming Hero",
           year: "2023",
-          description: "Deep dive into advanced React patterns, Next.js, and modern frontend development."
+          description: "Deep dive into advanced React patterns, Next.js, and modern frontend and backend development."
         }
       ]
     },
