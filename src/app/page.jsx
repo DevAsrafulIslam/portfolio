@@ -58,7 +58,7 @@ const Page = () => {
             className="space-y-4"
           >
             <p className="text-2xl sm:text-3xl md:text-3xl text-gray-300 font-semibold">
-              Full Stack Developer
+              MERN Stack Developer.
             </p>
             <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto">
               Specializing in creating beautiful, responsive web applications with React & Next.js
@@ -72,7 +72,7 @@ const Page = () => {
             transition={{ delay: 0.3 }}
             className="flex justify-center gap-4 flex-wrap max-w-xl mx-auto mb-8"
           >
-            {['React', 'Next.js', 'TypeScript', 'Tailwind CSS'].map((tech, index) => (
+            {['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'MongoDB', 'Express.js', 'Node.js'].map((tech, index) => (
               <span
                 key={tech}
                 className="px-4 py-2 bg-[#00B4D8]/10 text-[#00B4D8] rounded-full border border-[#00B4D8]/20 text-sm font-medium"
